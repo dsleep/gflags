@@ -413,13 +413,13 @@ set(CMAKE_DEBUG_POSTFIX "_debug")
 
 # ----------------------------------------------------------------------------
 # installation directories
-if (OS_WINDOWS)
-  set (RUNTIME_INSTALL_DIR "bin")
-  set (LIBRARY_INSTALL_DIR "lib")
-  set (INCLUDE_INSTALL_DIR "include")
-  set (CONFIG_INSTALL_DIR  "lib/cmake/${PACKAGE_NAME}")
-  set (PKGCONFIG_INSTALL_DIR)
-else ()
+# if (OS_WINDOWS)
+  # set (RUNTIME_INSTALL_DIR "bin")
+  # set (LIBRARY_INSTALL_DIR "lib")
+  # set (INCLUDE_INSTALL_DIR "include")
+  # set (CONFIG_INSTALL_DIR  "lib/cmake/${PACKAGE_NAME}")
+  # set (PKGCONFIG_INSTALL_DIR)
+# else ()
   set (RUNTIME_INSTALL_DIR bin)
   # The LIB_INSTALL_DIR and LIB_SUFFIX variables are used by the Fedora
   # package maintainers. Also package maintainers of other distribution
@@ -432,7 +432,7 @@ else ()
   set (INCLUDE_INSTALL_DIR include)
   set (CONFIG_INSTALL_DIR  ${LIBRARY_INSTALL_DIR}/cmake/${PACKAGE_NAME})
   set (PKGCONFIG_INSTALL_DIR ${LIBRARY_INSTALL_DIR}/pkgconfig)
-endif ()
+# endif ()
 
 # ----------------------------------------------------------------------------
 # add library targets
